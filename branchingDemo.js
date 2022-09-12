@@ -5,4 +5,9 @@ const months = ["January", "February", "March", "April", "May", "June", "July", 
 const d = new Date();
 //getMonth() returns the month as an integer (0-11). Jan = 0, Dec = 13
 let month = months[d.getMonth()]
-console.log("The date is: " +d)
+let day= d.getDate()
+let year= d.getFullYear()
+let currentDate = "The current data is " + month + " " + day + ", " + year
+console.log(d)
+console.log(currentDate)
+
