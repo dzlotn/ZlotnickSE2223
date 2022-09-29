@@ -8,6 +8,9 @@
 .noborder td, .noborder th{
     border:none !important;
 }
+.anthropomorphic-head{
+    transform:rotate(90deg);
+}
 
 .icon-white{
     color:#FFFFFF;
