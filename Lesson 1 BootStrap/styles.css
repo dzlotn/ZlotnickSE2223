@@ -5,6 +5,9 @@
 .footer{
     background-color:#540b0da2;
 }
+.noborder td, .noborder th{
+    border:none !important;
+}
 
 .icon-white{
     color:#FFFFFF;
