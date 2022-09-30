@@ -11,6 +11,9 @@
 .noborder th {
     border:0px;
 }
+th h1{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 
 
 .icon-white {
