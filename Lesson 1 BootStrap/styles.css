@@ -1,50 +1,59 @@
 /*-------Class CSS ------*/
-.overview{
-    background-color:#EFEAE7;
+.overview {
+    background-color: #EFEAE7;
 }
-.footer{
-    background-color:#540b0da2;
+
+.footer {
+    background-color: #540b0da2;
 }
-.noborder td, .noborder th{
-    border:none !important;
+
+.noborder td,
+.noborder th {
+    border: none !important;
 }
 
 
-.icon-white{
-    color:#FFFFFF;
-}
-.author{
-background-color:#D6A99A;
-}
-.about-author{
-    color:rgb(82,81,81);
+.icon-white {
+    color: #FFFFFF;
 }
 
-.showcase{
-    background-color:#D6A99A;
+.author {
+    background-color: #D6A99A;
 }
-.nb-bg-color{
-    background-color:#540b0da2;
+
+.about-author,.about-procedure {
+    color: rgb(82, 81, 81);
 }
-h1#ovPadLeft{
-    padding-left:20px;
+
+.showcase {
+    background-color: #D6A99A;
 }
-p#ovPadLeft{
-    padding-left:20px;
+
+.nb-bg-color {
+    background-color: #540b0da2;
+}
+
+h1#ovPadLeft {
+    padding-left: 20px;
+}
+
+p#ovPadLeft {
+    padding-left: 20px;
 }
 
 
 
 /*-------ID  CSS ------*/
 
-a#nbMenuItem{
-    font-size:25px;
-    padding-right:20px;
-    padding-left:20px;
+a#nbMenuItem {
+    font-size: 25px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
-div#about{
-    width:400px;
-    margin:auto;
+
+div#about {
+    width: 400px;
+    margin: auto;
 }
 
 /*-------Underline Animation CSS ------*/
@@ -53,8 +62,8 @@ div#about{
     display: inline-block;
     position: relative;
     /*color: #0087ca;*/
-  }
-  
+}
+
 .hover-underline-animation:after {
     content: '';
     position: absolute;
@@ -67,15 +76,8 @@ div#about{
     /*transform-origin: bottom right;*/
     transition: transform 0.35s ease-out;
 }
-  
+
 .hover-underline-animation:hover:after {
     transform: scaleX(1);
     /*transform-origin: bottom left;*/
 }
-
-
-
-
-
-
-
