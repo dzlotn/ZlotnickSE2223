@@ -9,7 +9,7 @@
 
 .noborder td,
 .noborder th {
-    border: none !important;
+    border:0px;
 }
 
 
@@ -17,7 +17,7 @@
     color: #FFFFFF;
 }
 
-.author {
+.author,.procedure {
     background-color: #D6A99A;
 }
 
