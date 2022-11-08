@@ -14,8 +14,8 @@ async function getData() {
     //console.log(table);
     table.forEach(row => {                //operate on each row
         const columns = row.split(','); //split each row into col.
-        const year = columns[0];        //assign year val
-        xTimes.push(year);              //push year value into  array xTimes
+        const time = columns[0];        //assign time val
+        xTimes.push(time);              //push times value into  array xTimes
 
         const VCT = parseFloat(columns[1]);         
         yAccelVCT.push(VCT);              //push VCT values into array yAccelVCT
@@ -41,28 +41,28 @@ async function createChart() {
         data: {
             labels: data.xTimes,
             datasets: [{
-                label: 'Combined Global Land-Surface Air and Sea-Surface Water Temperature in °C',
+                label: 'Acceleration of Head on Impact with VCT in m/s²',
                 data: data.yAccelVCT,
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 borderWidth: 1
             },
             {
-                label: 'Combined N.H. Land-Surface Air and Sea-Surface Water Temperature in °C',
+                label: 'Acceleration of Head on Impact with Vinyl Sheet in m/s²',
                 data: data.yAccelVS,
                 backgroundColor: 'rgba(1, 99, 132, 0.2)',
                 borderColor: 'rgba(1, 99, 132, 1)',
                 borderWidth: 1
             },
             {
-                label: 'Combined S.H. Land-Surface Air and Sea-Surface Water Temperature in °C',
+                label: 'Acceleration of Head on Impact with Linoleum in m/s²',
                 data: data.yAccelLN,
                 backgroundColor: 'rgba(1, 200, 132, 0.2)',
                 borderColor: 'rgba(1, 200, 132, 1)',
                 borderWidth: 1
             },
             {
-                label: 'Combined S.H. Land-Surface Air and Sea-Surface Water Temperature in °C',
+                label: 'Acceleration of Head on Impact with LVT in m/s²',
                 data: data.yAccelLVT,
                 backgroundColor: 'rgba(1, 18, 50, 0.2)',
                 borderColor: 'rgba(1, 18, 50, 1)',
@@ -76,7 +76,7 @@ async function createChart() {
                 x: {
                     title: {
                         display: true,
-                        text: 'Year',
+                        text: 'time (ms)',
                         font: {
                             size: 20
                         },
@@ -95,9 +95,9 @@ async function createChart() {
                     beginAtZero: false,
                     title: {
                         display: true,
-                        text: 'Global Mean Temperatures',
+                        text: 'Resultant Acceleration (m/s²)',
                         font: {
-                            size: 12
+                            size: 20
                         },
                     },
                     ticks:{
@@ -111,7 +111,7 @@ async function createChart() {
             plugins: {                          // title and legend display options
                 title: {
                     display: true,
-                    text: 'Combined Land-Surface Air and Sea-Surface Water Temperature in °C',
+                    text: 'Acceleration of an Anthroporphic Head over Impacts with Different Flooring Materials',
                     font: {
                         size: 24
                     },
