@@ -2,7 +2,7 @@
 
 
 async function getData() {
-    const response = await fetch('../data/Resultant Acceleration to Time - Sheet1.csv');
+    const response = await fetch('../data/ResAccel.csv');
     const data = await response.text(); //CSV in TEXT format
     const table = data.split('\n').slice(1);  //split by line and cut 0th row
     const xTimes = []; //x-axis labels = time values 
