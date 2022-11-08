@@ -1,7 +1,7 @@
 //Graph CSV data using chart.js
 
 async function getData() {
-    const response = await fetch('/ResAccel.csv');
+    const response = await fetch('ResAccel.csv');
     const data = await response.text(); //CSV in TEXT format
     const table = data.split('\n').slice(1);  //split by line and cut 0th row
     const xTimes = []; //x-axis labels = time values 
