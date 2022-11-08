@@ -38,6 +38,7 @@ async function createChart() {
     const ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
         type: 'line',
+        
         data: {
             labels: data.xTimes,
             datasets: [{
@@ -68,6 +69,9 @@ async function createChart() {
                 borderColor: 'rgba(1, 18, 50, 1)',
                 borderWidth: 1
             }]
+            
+
+
         },
 
         options: {
@@ -76,7 +80,7 @@ async function createChart() {
                 x: {
                     title: {
                         display: true,
-                        text: 'time (ms)',
+                        text: 'Time (ms)',
                         font: {
                             size: 20
                         },
@@ -101,7 +105,7 @@ async function createChart() {
                         },
                     },
                     ticks:{
-                        maxTicksLimit: data.yAccelVCT.length/10,
+                        maxTicksLimit: data.yAccelVCT.length/2,
                         font:{
                             size:12
                         },
