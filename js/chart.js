@@ -114,7 +114,7 @@ async function createChart() {
             plugins: {                          // title and legend display options
                 title: {
                     display: true,
-                    text: 'Acceleration of an Anthroporphic Head over Impacts with Different Flooring Materials',
+                    text: 'Acceleration of an Anthropomorphic Head over Impacts with Different Flooring Materials',
                     font: {
                         size: 24
                     },
