@@ -9,7 +9,7 @@
   import { getDatabase, ref, set,update,child,get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
   // Your web app's Firebase configuration
-const firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyDnuQcSFKiwYGOwzkCL9im6KNRE__7bcWU",
     authDomain: "researchwebsite-837b5.firebaseapp.com",
     databaseURL: "https://researchwebsite-837b5-default-rtdb.firebaseio.com",
@@ -86,7 +86,7 @@ function isEmptyorSpaces(str){
 function validation(firstName, lastName, email, password){
   let fNameRegex = /^[a-zA-Z]+$/;
   let lNameRegex = /^[a-zA-Z]+$/;
-  let emailRegex = /^[a-zA-Z0-9]+(@ctemc|@gmail)\.(org|com)$/;
+  let emailRegex = /^[a-zA-Z0-9]+@ctemc\.org$/;
   
   if(isEmptyorSpaces(firstName) || isEmptyorSpaces(lastName) || 
   isEmptyorSpaces(email)||isEmptyorSpaces(password)){
