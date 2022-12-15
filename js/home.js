@@ -74,10 +74,10 @@ function signOutUser(){
 
 
 // -------------------------Update data in database --------------------------
-function updateData(userID,year,month,day,temperature){
+function updateData(userID,material,time,accel){
   //must use brackets around variable name to use it as a key dumbo
-      update(ref(db,'users/'+userID+'/data/'+year+'/'+month),{
-        [day]: temperature
+      update(ref(db,'users/'+userID+'/data/'+material),{
+        [time]: accel
       })
       .then(()=>{
         alert("Data updated successfully.")
@@ -105,7 +105,7 @@ window.onload = function(){
   }
   else{
       userLink.innerText = currentUser.firstname;
-      welcome.innerText = "Welcome "+currentUser.firstname;
+      welcome.innerText = "Welcome to the Account Interface, " +currentUser.firstname + "!";
       userLink.classList.replace("btn","nav_link");
       userLink.classList.add("btn-primary")
       userLink.href = "#";
@@ -119,12 +119,11 @@ window.onload = function(){
   }
   // Update data function call
   document.getElementById('update').onclick = function(){
-    const year = document.getElementById('year').value;
-    const month = document.getElementById('month').value;
-    const day = document.getElementById('day').value;
-    const temperature = document.getElementById('temperature').value;
+    const material = document.getElementById('material').value;
+    const time = document.getElementById('time').value;
+    const accel = document.getElementById('accel').value;
     const userID = currentUser.uid;
-    updateData(userID,year,month,day,temperature);
+    updateData(userID,material,time,accel);
   };
 }
 
