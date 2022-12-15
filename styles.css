@@ -21,7 +21,7 @@ th h1{
     color: #FFFFFF;
 }
 
-.author,.procedure,.signin {
+.author,.procedure,.signin, .register,.home{
     background-color: #D6A99A;
 }
 
@@ -99,4 +99,5 @@ div#about {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }

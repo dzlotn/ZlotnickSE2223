@@ -22,7 +22,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="js/signIn.js" defer></script>
 </head>
-<body>
+<body >
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark nb-bg-color">
         <div class="container">
@@ -70,14 +70,22 @@
     <div class="signUpForm">     
         <form>
             <input type="email" placeholder="Email" id="loginEmail" class="form-control mb-3">
-            <input type="password" placeholder="password" id="loginPassword" class="form-control mb-3">
+            <input type="password" placeholder="Password" id="loginPassword" class="form-control mb-3">
             <div class="form-check form-switch mb-3">
-                <input class="form-check-input" type="checkbox" role="switch" id="keepLoggedInSwitch">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Keep me signed in</label>
+                <input class="form-check-input " type="checkbox" role="switch" id="keepLoggedInSwitch" >
+                <label class="form-check-label " for="flexSwitchCheckDefault">Keep me signed in</label>
             </div>
-            <button type = "button" id="signIn" name="signIn" class="btn btn-outline-primary mb-3 w-100">Sign In</button>
+            <button type = "button" id="signIn" name="signIn" class="btn btn-transparent btn-outline-light mb-3 w-100 text-black">Sign In</button>
         </form>
     </div>
     </section>
+    <footer class="p-5 footer text-light text-center position-relative ">
+        <div class="container">
+            <p class="lead">Copyright &copy; SE 2022 BootStrap Demo</p>
+            <a href="#" class="position-absolute bottom-0 end-0 p-5 ">
+                <i class="bi bi-arrow-up-circle h2 icon-white"></i>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>
