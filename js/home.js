@@ -87,47 +87,6 @@ function updateData(userID,year,month,day,temperature){
       });
   }
 
-// ----------------------Get a datum from FRD (single data point)---------------
-function getData(userID,year,month,day){
-  let yearVal = document.getElementById('yearVal');
-  let monthVal = document.getElementById('monthVal');
-  let dayVal = document.getElementById('dayVal');
-  let tempVal = document.getElementById('tempVal');
-  const dbref = ref(db); //firebase parameter required for get
-
-  //provide the path through the nodes to the data
-  get(child(dbref,'users/'+userID + '/data/' + year + '/' +month )).then((snapshot)=>{
-    if(snapshot.exists()){
-      yearVal.textContent = year;
-      monthVal.textContent = month;
-      dayVal.textContent = day;
-      //to get specific value from a key: snapshot.val()[key]
-      tempVal.textContent = snapshot.val()[day];
-    }
-    else{
-      alert('no data found.')
-    }
-  })
-  .catch((error)=>{
-    alert('unsuccessful, error: '+error)
-  })
-
-  
-}
-
-// ---------------------------Get a month's data set --------------------------
-// Must be an async function because you need to get all the data from FRD
-// before you can process it for a table or graph
-
-
-// Add a item to the table of data
-
-
-
-// -------------------------Delete a day's data from FRD ---------------------
-
-
-
 // --------------------------- Home Page Loading -----------------------------
 
 window.onload = function(){
@@ -158,24 +117,6 @@ window.onload = function(){
         signOutUser();
       }
   }
-  
-
-  
-  // Get, Set, Update, Delete Sharkriver Temp. Data in FRD
-  // Set (Insert) data function call
-  document.getElementById('set').onclick = function(){
-    const year = document.getElementById('year').value;
-    const month = document.getElementById('month').value;
-    const day = document.getElementById('day').value;
-    const temperature = document.getElementById('temperature').value;
-    const userID = currentUser.uid;
-    setData(userID,year,month,day,temperature);
-  };
-  
- 
-  
- 
-
   // Update data function call
   document.getElementById('update').onclick = function(){
     const year = document.getElementById('year').value;
@@ -185,20 +126,6 @@ window.onload = function(){
     const userID = currentUser.uid;
     updateData(userID,year,month,day,temperature);
   };
-
-  // Get a datum function call
-  document.getElementById('get').onclick = function(){
-    const year = document.getElementById('getYear').value;
-    const month = document.getElementById('getMonth').value;
-    const day = document.getElementById('getDay').value;
-    const userID = currentUser.uid;
-    getData(userID,year,month,day);
-  };
 }
 
-  // Get a data set function call
   
-
-  // Delete a single day's data function call
-  
-

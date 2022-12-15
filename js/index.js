@@ -28,25 +28,25 @@ let currentUser = null;//initialize currentUser to null
 window.onload = function(){
     getUserName();
     if(currentUser == null){
-    userLink.innerText = "Register Account";
+    userLink.innerText = "Register";
     userLink.classList.replace("nav-link","btn");
-    userLink.classList.add("btn-primary")
+    userLink.classList.add("bg-transparent");
     userLink.href = "register.html";
   
     signOutLink.innerText = "Sign In"
     signOutLink.classList.replace("nav-link","btn")
-    signOutLink.classList.add("btn-success");
+    signOutLink.classList.add("bg-transparent");
     signOutLink.href = "signIn.html";
     }
     else{
         userLink.innerText = currentUser.firstname;
         userLink.classList.replace("btn","nav_link");
-        userLink.classList.add("btn-primary")
+        userLink.classList.add("bg-transparent ")
         userLink.href = "#";
   
         signOutLink.innerText = "Sign Out"
         signOutLink.classList.replace("btn","nav_link")
-        signOutLink.classList.add("btn-success");
+        signOutLink.classList.add("bg-transparent");
         document.getElementById('signOut').onclick = function(){
           signOutUser();
         }
@@ -72,7 +72,7 @@ function getUserName(){
     localStorage.removeItem('user')     //clear local storage
     localStorage.removeItem('keepLoggedIn'); 
     signOut(auth).then(()=>{
-      alert("The user has successfully logged out.")
+      alert('The user has successfully logged out.')
   
     }).catch((error) =>{
       //error occured
